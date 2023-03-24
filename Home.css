@@ -1,0 +1,339 @@
+
+.nav-colored  {
+  color: black !important; /* set the desired color */
+
+}
+
+.navbar {
+  transition: background-color 0.5s ease-in-out; /* add a transition property */
+}
+
+.nav-colored:hover {
+  color: #151D2A;
+}
+
+
+.Color {
+    color: white;
+    background-color: #151D2A;
+}
+
+.media {
+  transform: translateX(+50px);
+  opacity: 0;
+}
+
+.media-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.5s;
+  writing-mode: vertical-rl;
+  margin: auto;
+  padding-right: 0.4em;
+  list-style: none;
+}
+
+.media-text:hover {
+  cursor: pointer;
+  color: #77FF85;
+}
+
+
+.scroll {
+    transform-origin: 100%;
+    transform: rotate(-90deg);
+}
+
+.name {
+    position: absolute;
+    transform: translateX(100%);
+}
+
+
+.circle {
+    border: 3px dashed rgb(194, 194, 194);
+    margin: auto;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: visible;
+  }
+
+  .circle:hover .word {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #77FF85;
+  }
+  
+  .word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translate(110px) rotate(0deg);
+    white-space: nowrap;
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .word:hover {
+    cursor: pointer;
+    color: white;
+    
+  }
+  
+  .container:hover .word {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+
+  .word:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .word:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .word:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  .word:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
+  .word:nth-child(5) {
+    animation-delay: 4s;
+  }
+  
+  .word:nth-child(6) {
+    animation-delay: 5s;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) translate(110px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) translate(110px) rotate(-360deg);
+    }
+  }
+
+  .btn-primary:hover {
+    color: #151D2A !important;
+    background-color: white !important;
+    border-color: white;
+  }
+  
+
+  .my-button {
+    background-color: rgb(0, 133, 124);
+    width: 10em;
+    border-radius: 90px;
+    border: 2px solid #151D2A;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 auto; /* set margin to 0 and auto */
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: block; /* set display to block */
+}
+
+  
+  .my-button:hover {
+    color: #151D2A;
+    background-color: white;
+    border-color: white;
+  }
+  
+  .my-button:active {
+    background-color: rgb(0, 133, 124);
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+  }
+  
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+  
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+  color: gray;
+  background-color: #151D2A;
+  margin: auto;
+}
+
+.inputBox textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+  color: gray;
+  background-color: #151D2A;
+  margin: auto;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  font-size: 1em;
+  pointer-events: none;
+  color: grey;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: aqua;
+  transform: translateX(10px) translateY(-25px);
+  background-color: #151D2A;
+  font-size: 0.65em;
+  padding: 1 10px;
+  border-left: 1px solid aqua;
+  border-right: 1px solid aqua;
+}
+
+
+.inputBox textarea:focus ~ span {
+  color: aqua;
+  transform: translateX(10px) translateY(-25px);
+  background-color: #151D2A;
+  font-size: 0.65em;
+  padding: 1 10px;
+  border-left: 1px solid aqua;
+  border-right: 1px solid aqua;
+}
+
+@media screen and (min-width: 768px) {
+  #AboutMe, #Projects {
+    /* Add styles for large devices here */
+    height: 90dvh;
+  }
+}
+
+
+
+.rev-block span {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 1.5s;
+}
+
+.rev-block {
+  position: relative;
+
+}
+
+.rev-block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgb(0, 133, 124);;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes rev-block {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rev-block2 span {
+  opacity: 0;
+  animation: appear-text 0.0001s linear forwards;
+  animation-delay: 2.5s;
+}
+
+.rev-block2 {
+  position: relative;
+
+}
+
+.rev-block2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgb(0, 133, 124);;
+  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation-delay: 2s;
+}
+
+
+@keyframes rev-block2 {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
