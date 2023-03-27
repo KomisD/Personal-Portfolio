@@ -161,13 +161,13 @@
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           
           navbar.classList.remove("bg-transperent");
-          navbar.classList.add("bg-secondary");
+          navbar.classList.add("bg-light");
           texts.forEach( text => text.classList.add("nav-colored"));
           name.classList.add("nav-colored");
           
         } else {
           navbar.classList.add("bg-transperent");
-          navbar.classList.remove("bg-secondary");
+          navbar.classList.remove("bg-light");
           texts.forEach( text => text.classList.remove("nav-colored"));
           name.classList.remove("nav-colored");
         }
