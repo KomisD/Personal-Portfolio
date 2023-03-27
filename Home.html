@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-md bg-transperent fixed-top " style="background-color: rgb(0, 133, 124) !important;">
+  <nav class="navbar navbar-expand-md bg-transperent fixed-top " >
     <div class="container-fluid">
       <a class="navbar-brand fw-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.4);" href="#">Dimos Kompitselidis</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,13 +161,13 @@
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
           
           navbar.classList.remove("bg-transperent");
-          navbar.classList.add("bg-secondary");
+          navbar.classList.add("bg-light");
           texts.forEach( text => text.classList.add("nav-colored"));
           name.classList.add("nav-colored");
           
         } else {
           navbar.classList.add("bg-transperent");
-          navbar.classList.remove("bg-secondary");
+          navbar.classList.remove("bg-light");
           texts.forEach( text => text.classList.remove("nav-colored"));
           name.classList.remove("nav-colored");
         }
